@@ -12,9 +12,11 @@ interface Props {
   hide?: boolean
 
   onHide?: () => void
+
+  icon?: JSX.Element
 }
 
-export const Input = ({ onChange, value, hide, onHide, placeholder }: Props) => {
+export const Input = ({ onChange, value, hide, onHide, placeholder, icon }: Props) => {
 
   return (
     <S.Wrapper>
@@ -30,6 +32,7 @@ export const Input = ({ onChange, value, hide, onHide, placeholder }: Props) => 
           {!hide && <EyeOpenedIcon onClick={onHide} />}
         </>
       }
+      {!!icon && icon}
     </S.Wrapper>
   )
 }
