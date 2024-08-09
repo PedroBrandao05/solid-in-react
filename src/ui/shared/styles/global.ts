@@ -45,6 +45,10 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     line-height: 1.5;
     overflow: hidden;
+
+    &::-webkit-scrollbar {
+      width: .1rem;
+    }
   }
 
   /* Set shorter line heights on headings and interactive elements */

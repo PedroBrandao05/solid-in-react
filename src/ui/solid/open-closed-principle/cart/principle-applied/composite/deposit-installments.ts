@@ -13,7 +13,7 @@ export class DepositInstallmentsPaymentMethod extends PaymentMethod {
 
     return [
       { label: `Entrada de ${this.deposit}%`, price: depositPrice },
-      { label: `Parcelas ${this.installments}x`, price: (totalPrice - depositPrice) / this.installments }
+      { label: `Parcelas ${this.installments}x`, price: Math.ceil((totalPrice - depositPrice) / this.installments) }
     ]
   }
 
